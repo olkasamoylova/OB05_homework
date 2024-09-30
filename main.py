@@ -1,16 +1,15 @@
 import pygame
 import random
 
-# Инициализация Pygame
 pygame.init()
 
 # Параметры окна
 WIDTH = 800
 HEIGHT = 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Попадание в кирпичи")
+pygame.display.set_caption("Игра <<Кирпичи>> ")
 
-# Цвета
+# задаем цвета
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -154,7 +153,7 @@ class Game:
 
 def draw_start_screen():
     screen.fill(BLACK)
-    title_text = font.render("Попадание в кирпичи", True, WHITE)
+    title_text = font.render("Игра <<Кирпичи>>", True, WHITE)
     start_text = font.render("Нажмите любую клавишу для старта", True, WHITE)
     rules_text = font.render("Правила: Попадите мячиком в кирпичи", True, WHITE)
 
@@ -211,7 +210,6 @@ def main():
                 in_game_over = True
 
         clock.tick(FPS)
-
 
 if __name__ == "__main__":
     main()
